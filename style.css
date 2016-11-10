@@ -24,9 +24,9 @@ li a:hover {
  background-color: #4CAF50;
 }
 body {
-	font-family: Ariel;
-	background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
-	}
+background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
+font-family: Ariel;
+}
 h1 {
     font-size: 100px;
     font-weight: bold;
