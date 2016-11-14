@@ -1,11 +1,44 @@
 <!doctype html>
 <html>
     <head>
-        <title>My Website</title>
-        <button onclick="piestuff();" style="margin-top: 100px;"> CLICK ME!!! </button>
+<title>My Website</title>
+<button onclick="piestuff();" style="margin-top: 100px;"> CLICK ME!!! </button>
 <div id="canvasContainer" width="100%" style="width:100%; height:100%; overflow: hidden;">
 <canvas width="200px" height="200px" class="codehs-editor-canvas"></canvas>
 </div>
+<style> body{
+background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+li{
+float: left;
+}
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 25px 27px;
+text-decoration: none;
+}
+li a:hover {
+background-color: #111;
+}
+.active {
+background-color: #4CAF50;
+}
+h1 {
+font-size: 100px;
+font-weight: bold;
+color: black;
+text-align: center;
+}
+</style>
         <script>
             alert("Eureka!");
             window.onload = function() {
@@ -16,6 +49,11 @@ start();
         </script>
     </head>
     <body>
+  <li><a class="active">Home</a></li>
+  <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
+  <li><a class="active"  href="https://perryma.tk/VanceT/other.html">Other</a></li>
+  <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
+  <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">Codes</a></li>
         <h1>I DID IT!!!</h1>
     </body>
 </html>
