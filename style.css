@@ -63,3 +63,9 @@ canvas {
 
     border: 1px solid black;
 }
+#spanModify{
+	    font-size: 26px;
+    font-weight: 400;
+    color: black;
+    margin: 0px 0px 0px 0px;
+}
