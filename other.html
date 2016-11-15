@@ -5,8 +5,7 @@
 <link rel="stylesheet" type="text/css"href="style.css">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-	  <style> 
+<style> 
 ul {
     list-style-type: none;
     margin: 0;
@@ -41,10 +40,20 @@ li a:hover {
   <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">Codes</a></li>
   <li><a class="active"  href="https://perryma.tk/VanceT/popup.html">Pop-up</a></li>
   <li><a class="active"  href="https://perryma.tk/VanceT/htmltest.html">Text</a></li>
-
-
-
 </ul>
+<br>
+<br>	
+	<textarea  rows="10" cols="80" id="inputText">Write something!</textarea>
+	<button onclick="testHTML();">Test!</button>
+	<span id="s1" onclick="clicked();">Hello</span>
+		<script>
+			function testHTML() {
+			var theSpan = document.getElementById("s1");
+			var userInput = document.getElementById("inputText");
+			theSpan.innerHTML = userInput.value;
+}
+</script>
+<span id="spanModify">.</span>
 </body> 
 </html>
     
