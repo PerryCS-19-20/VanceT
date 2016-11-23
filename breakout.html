@@ -2,9 +2,7 @@
 <html>
 	<head>
 		<title>Breakout</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
-		<link rel="stylesheet" type="text/css" href="style2.css"> 
+				<link rel="stylesheet" type="text/css" href="style2.css"> 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="popup.html" type="image/x-icon">
@@ -66,6 +64,9 @@ h1 {
     margin-top:300px;
 }
 </style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
+
 <script>
                       window.onload = function() {
 /* Constants for bricks */
@@ -87,7 +88,7 @@ var defBricX = brickX;
 var defBricY = brickY;
 /* Constants for ball and paddle */
 var paddle;
-var PADDLE_WIDTH = 80;
+var PADDLE_WIDTH = 200;
 var PADDLE_HEIGHT = 15;
 var PADDLE_OFFSET = 10;
 var ball;
@@ -144,7 +145,7 @@ function drawRows(){
 function makePaddle(){
     paddle = new Rectangle(PADDLE_WIDTH, PADDLE_HEIGHT);
     paddle.setPosition(getWidth() / 2, getHeight() - PADDLE_OFFSET - PADDLE_HEIGHT);
-    paddle.setColor(Color.black);
+    paddle.setColor(Color.white);
     add(paddle);
 }
 function paddleMove(e){
@@ -153,6 +154,7 @@ function paddleMove(e){
 function makeBall(){
 	ball = new Circle(BALL_RADIUS);
 	ball.setPosition(BALL_START_X,BALL_START_Y);
+	ball.setColor(Color.white);
 	add(ball);
     setTimer(move, 2);
 }
@@ -261,7 +263,7 @@ function cheatCode(e){
   	</script>
 		<style>
 			canvas {
-    				border: 1px solid black;
+    				border: 1px solid white;
 			}
 		</style>
 	</head>
