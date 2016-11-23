@@ -2,6 +2,68 @@
 <html>
 	<head>
 		<title>Breakout</title>
+				<link rel="stylesheet" type="text/css" href="style2.css"> 
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="popup.html" type="image/x-icon">
+<style> 
+body{
+background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 27px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+.active {
+ background-color: #4CAF50;
+}
+    
+li.dropdown {
+    display: inline-block;
+	background-color: #4CAF50;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    margin-top:300px;
+}
+</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
 		<style> 
@@ -149,7 +211,7 @@ function paddleMove(e){
 function makeBall(){
 	ball = new Circle(BALL_RADIUS);
 	ball.setPosition(BALL_START_X,BALL_START_Y);
-        ball.setColor(Color.white);
+	ball.setColor(Color.white);
 	add(ball);
     setTimer(move, 2);
 }
@@ -263,26 +325,24 @@ function cheatCode(e){
 		</style>
 	</head>
 	<body>
-                        	<ul>
+				<ul>
   <li><a class="active" href="https://perryma.tk/VanceT/index.html">Home</a></li>
   <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
-  <li><a class="active">Breakout</a></li>
+  <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
   <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">Codes</a></li>
-  <li><a class="active" href="https://perryma.tk/VanceT/htmltest.html">Text</a></li>
-  <li class="dropdown">
+   <li class="dropdown">
        <a href="#" class="dropbtn">Other Links</a>
        <div class="dropdown-content">
 	   <a class="active" href="https://perryma.tk/VanceT/other.html">Other</a>
 	   <a class="active" href="https://perryma.tk/VanceT/popup.html">Pop up</a>
        <a class="active" href="https://perryma.tk/VanceT/todolist.html">To Do List</a>
        <a class="active" href="https://perryma.tk/VanceT/chalkboard.html">Chalk Board</a>
-       <a class="active" href="https://perryma.tk/VanceT/tictactoe.html">Tic Tac Toe</a>
     </div>
   </li>
 </ul>
-<div id="canvasContainer" width="500%" style="width: 500%; height: 300%; overflow: hidden;">
-<canvas width="1500" height="750" class="codehs-editor-canvas"></canvas>
-</div>
+		<div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
+			<canvas width="1000" height="750" class="codehs-editor-canvas"></canvas>
+		</div>
 
 	</body>
 </html>
