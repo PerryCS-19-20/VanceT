@@ -64,6 +64,23 @@ h1 {
 }
 </style>
 <script type="text/javascript" src="../scripts.js"></script>
+<script>
+function testHTML() {
+				var userInput = document.getElementById("userInput");
+				var theSpan = document.getElementById("s1");
+				theSpan.innerHTML = userInput.value;		   
+			}
+                        function chalkboard() {
+                                var userInput = document.getElementById("textInputChalkboard");
+                                var theSpan = document.getElementById("spanModifyChalkboard");
+                                 for(var i = 0; i < 100 ; i++) {
+                                 var newItem = document.createElement("li");  
+                                 newItem.textContent = "I will not" + " " + userInput.value;
+                                 theSpan.appendChild(newItem);
+                                }
+                        }
+		
+</script>
 </head>
 <body>
 <ul>
@@ -82,7 +99,7 @@ h1 {
 </li>
 </ul>
 <div>
-<textarea  rows="30" cols="100" id="inputText">Write something!</textarea>
+<textarea  rows="20" cols="80" id="inputText">Write something!</textarea>
 <br>
 <p>
 <span id="s1" style="text-align:center" ;="">Output Text</span>
