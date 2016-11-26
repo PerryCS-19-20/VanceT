@@ -63,24 +63,15 @@ h1 {
     margin-top:300px;
 }
 </style>
-<script type="text/javascript" src="../scripts.js"></script>
 <script>
-function testHTML() {
-				var userInput = document.getElementById("userInput");
-				var theSpan = document.getElementById("s1");
-				theSpan.innerHTML = userInput.value;		   
-			}
-                        function chalkboard() {
-                                var userInput = document.getElementById("textInputChalkboard");
-                                var theSpan = document.getElementById("spanModifyChalkboard");
-                                 for(var i = 0; i < 100 ; i++) {
-                                 var newItem = document.createElement("li");  
-                                 newItem.textContent = "I will not" + " " + userInput.value;
-                                 theSpan.appendChild(newItem);
-                                }
-                        }
-		
-</script>
+    <script>
+        function addlist(){
+        var userInput = document.getElementById("inputText");       
+        var words = document.createElement("li");
+        words.textContent = userInput.value;
+        list.appendChild(words);
+    }
+    </script>
 </head>
 <body>
 <ul>
@@ -100,16 +91,10 @@ function testHTML() {
 </li>
 </ul>
 <div>
-<textarea  rows="10" cols="50" id="inputText">Write something!</textarea>
-<br>
-<p>
-<span id="s1" style="text-align:center" ;="">Output Text</span>
-</p>
-<button style="margin: 10px;" onclick="chalkboard();"> Repeat! </button>
-<br>
-<ol id="spanModifyChalkboard">
-
-	</ol>
+    <textarea rows ="10" cols="80" id ="inputText"> This Says Words!</textarea>
+    <button onclick="addlist();">Test!</button>     
+    <ol><span id ="list">
+	    </span></ol>
 </div>
 </body> 
 </html>
