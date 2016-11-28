@@ -61,6 +61,8 @@ ol {
 font-size: 25px;
 font-weight: bold;
 color: white;
+text-align: center;
+margin: 50px;
 }
 
 canvas {
@@ -72,4 +74,8 @@ canvas {
     font-weight: 400;
     color: black;
     margin: 0px 0px 0px 0px;
+}
+span{
+    font-size: 50px;
+    text-align: center;
 }
