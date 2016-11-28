@@ -71,54 +71,53 @@ td{
             text-align:center;           
         }    
 </style>
-	 <script>
-    var player = 1;
-    var winners = 0;
-    function play(id){       
-        if(winners ==0){
-        var tic = document.getElementById(id);       
-          if(tic.textContent == "X" || tic.textContent == "O"){
-         tac.textContent = "Nope!";   
-        } else {
-        if(player == 1 && tic.textContent != "O"){
-        tic.textContent = "X";  
-          player=2;
-          tac.textContent = " ";
-        } else { if (tic.textContent != "X" ){
-        tic.textContent = "O";  
-          player=1;
-          tac.textContent = " Winnner!";
-        }     
-        }
-        }
-        checkwin();
-        }
-    }
-        function checkwin(){
-          checkrows(a1,a2,a3); 
-          checkrows(b1,b2,b3); 
-          checkrows(c1,c2,c3); 
-          checkrows(a1,b1,c1); 
-          checkrows(a2,b2,c2); 
-          checkrows(a3,b3,c3); 
-          checkrows(a1,b2,c3); 
-          checkrows(a3,b2,c1);    
-    }
-        function checkrows(first,second,third){
-           var 1 = document.getElementById(first); 
-           var 2 = document.getElementById(second); 
-           var 3 = document.getElementById(third); 
-          if(first.textContent == second.textContent && second.textContent == third.textContent && first.textContent == third.textContent && first.textContent !=""){                               
-            if(first.textContent == "O"){
-                tac.textContent = " O Wins"
-          }
-          if(first.textContent == "X"){
-           tac.textContent = " X Wins"
-          }
-          winners++;
-        }            
-        }       
-    </script>
+<script>
+var player = 1;
+var winners = 0;
+function play(id){       
+if(winners ==0){
+var tic = document.getElementById(id);       
+if(tic.textContent == "X" || tic.textContent == "O"){
+tac.textContent = "Nope!";   
+} else {
+if(player == 1 && tic.textContent != "O"){
+tic.textContent = "X";  
+player=2;
+tac.textContent = " ";
+} else { if (tic.textContent != "X" ){
+tic.textContent = "O";  
+player=1;
+tac.textContent = " Winnner!";
+}     
+}
+}
+checkwin();
+}
+function checkwin(){
+checkrows(a1,a2,a3); 
+checkrows(b1,b2,b3); 
+checkrows(c1,c2,c3);
+checkrows(a1,b1,c1); 
+checkrows(a2,b2,c2); 
+checkrows(a3,b3,c3); 
+checkrows(a1,b2,c3); 
+checkrows(a3,b2,c1);    
+}
+function checkrows(first,second,third){
+var 1 = document.getElementById(first); 
+var 2 = document.getElementById(second); 
+var 3 = document.getElementById(third); 
+if(first.textContent == second.textContent && second.textContent == third.textContent && first.textContent == third.textContent && first.textContent !=""){                               
+if(first.textContent == "O"){
+tac.textContent = " O Wins"
+}
+if(first.textContent == "X"){
+tac.textContent = " X Wins"
+}
+winners++;
+}            
+}       
+</script>
 </head>
 <body>
 <ul>
