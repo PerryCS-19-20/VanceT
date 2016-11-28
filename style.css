@@ -4,7 +4,6 @@ ul {
     padding: 0;
     overflow: hidden;
     color: white;
-    background-color: #333;
 
 
 }
@@ -62,7 +61,8 @@ ol {
 font-size: 25px;
 font-weight: bold;
 color: white;
-background-color: black;
+text-align: center;
+margin: 50px;
 }
 
 canvas {
@@ -74,4 +74,8 @@ canvas {
     font-weight: 400;
     color: black;
     margin: 0px 0px 0px 0px;
+}
+span{
+    font-size: 50px;
+    text-align: center;
 }

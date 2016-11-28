@@ -10,24 +10,24 @@
 body{
 background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
 }
-ul {
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
 }
-li {
+ul.navbar li {
     float: left;
 }
-li a {
+ ul.navbar li a {
     display: block;
     color: white;
     text-align: center;
     padding: 25px 27px;
     text-decoration: none;
 }
-li a:hover {
+ul.navbar li a:hover {
     background-color: #111;
 }
 .active {
@@ -62,28 +62,35 @@ h1 {
     text-align: center;
     margin-top:300px;
 }
+textarea{
+color:black;
+font-size:20px ;
+	}
+ol.testhtml{
+font-size:30px;
+text-align:center;
+color:white;
+        }
 </style>
-<script type="text/javascript" src="../scripts.js"></script>
-<script>
-function testHTML() {
-				var userInput = document.getElementById("userInput");
-				var theSpan = document.getElementById("s1");
-				theSpan.innerHTML = userInput.value;		   
-			}
-                        function chalkboard() {
-                                var userInput = document.getElementById("textInputChalkboard");
-                                var theSpan = document.getElementById("spanModifyChalkboard");
-                                 for(var i = 0; i < 100 ; i++) {
-                                 var newItem = document.createElement("li");  
-                                 newItem.textContent = "I will not" + " " + userInput.value;
-                                 theSpan.appendChild(newItem);
-                                }
-                        }
-		
+<script class="testhtml">
+    function testHTML() {
+    var theSpan = document.getElementById("s1");
+    var userInput = document.getElementById("inputText");
+    theSpan.innerHTML = userInput.value;
+} 
+        function addlist(){
+     var theSpan = document.getElementById("spanModifyChalkboard");
+    var userInput = document.getElementById("iText");
+        for(var i=0; i<100; i++){      
+        var words = document.createElement("li");  
+        words.textContent = "I Will Not " + userInput.value;
+        theSpan.appendChild(words);
+        }
+}
 </script>
 </head>
 <body>
-<ul>
+<ul class="navbar">
 <li><a class="active" href="https://perryma.tk/VanceT/index.html">Home</a></li>
 <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
 <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
@@ -95,20 +102,15 @@ function testHTML() {
 <a class="active" href="https://perryma.tk/VanceT/popup.html">Pop up</a>
 <a class="active" href="https://perryma.tk/VanceT/todolist.html">To Do List</a>
 <a class="active">Chalk Board</a>
+<a class="active" href="https://perryma.tk/VanceT/tictactoe.html">Tic Tac Toe</a>
 </div>
 </li>
 </ul>
 <div>
-<textarea  rows="10" cols="50" id="inputText">Write something!</textarea>
-<br>
-<p>
-<span id="s1" style="text-align:center" ;="">Output Text</span>
-</p>
-<button style="margin: 10px;" onclick="chalkboard();"> Repeat! </button>
-<br>
-<ol id="spanModifyChalkboard">
-
-	</ol>
+    <textarea rows ="10" cols="80" id ="iText"> Write something </textarea>
+    <button onclick="addlist();">Repeat</button>     
+    <ol><span id ="spanModifyChalkboard">
+	    </span></ol>
 </div>
 </body> 
 </html>

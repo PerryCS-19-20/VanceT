@@ -66,6 +66,8 @@ h1 {
 td {
     border: 1px solid white;
     border-collapse: collapse;
+    font-size: 80px;
+    color:white;
     text-align: center;
     width:300px;
     height:300px ;
@@ -73,6 +75,16 @@ td {
 
 
 </style>
+<script>
+function play(id){
+var tic = document.getElementById(id);
+if(tic.textContent == "X" || tic.textContent == "O"){
+    tac.textContent="Nope";
+}else{
+    
+}
+}
+</script>
 </head>
 <body>
 <ul>
@@ -93,19 +105,19 @@ td {
 </ul>
     <table style="width:50%">
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="a1" onclick="play('a1');"></td>
+    <td id="a2" onclick="play('a2');"></td>
+    <td id="a3" onclick="play('a3');"></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="b1" onclick="play('b1');"></td>
+    <td id="b2" onclick="play('b2');"></td>
+    <td id="b3" onclick="play('b3');"></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="c1" onclick="play('c1');"></td>
+    <td id="c2" onclick="play('c2');"></td>
+    <td id="c3" onclick="play('c3');"></td>
   </tr>
 
 </table>
