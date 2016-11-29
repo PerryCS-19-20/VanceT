@@ -22,11 +22,11 @@ li a:hover {
     background-color: #111;
 }
 .active {
- background-color: #4CAF50;
+    background-color: #4CAF50;
 }
 body {
-font-family: Ariel;
-background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
+    font-family: Ariel;
+    background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
 
 }
 h1 {
@@ -35,34 +35,34 @@ h1 {
     color: black;
     text-align: center;
 
-    }
+}
 h2 {
-	font-size: 30px;
+    font-size: 30px;
     font-weight: bold;
     color: black;
     text-align: center;
-	}
+}
 p {
-	font-size: 40px; 
-	font-weight: bold;
-	background-color:black;
-	color:white;
-	}
+    font-size: 40px; 
+    font-weight: bold;
+    background-color:black;
+    color:white;
+}
 h3 {
-	font-size:25px;
-	}
+    font-size:25px;
+}
 h4 {
-text-align: center;
-font-size: 100px;
-font-family: Helvetica;
-color:#FF6347;
+    text-align: center;
+    font-size: 100px;
+    font-family: Helvetica;
+    color:#FF6347;
 }
 ol {
-font-size: 25px;
-font-weight: bold;
-color: white;
-text-align: center;
-margin: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 50px;
 }
 
 canvas {
@@ -70,7 +70,7 @@ canvas {
     border: 1px solid black;
 }
 #spanModify{
-	    font-size: 26px;
+    font-size: 26px;
     font-weight: 400;
     color: black;
     margin: 0px 0px 0px 0px;
@@ -78,4 +78,8 @@ canvas {
 span{
     font-size: 50px;
     text-align: center;
+}
+
+.dropbtn {
+
 }

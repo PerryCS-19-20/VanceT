@@ -1,12 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <title> Vance's Website </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Times Table</title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="popup.html" type="image/x-icon">
-        <style> 
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <style>
             body{
                 background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
             }
@@ -33,6 +37,7 @@
             .active {
                 background-color: #4CAF50;
             }
+
             li.dropdown {
                 display: inline-block;
                 background-color: #4CAF50;
@@ -58,43 +63,49 @@
             h1 {
                 font-size: 100px;
                 font-weight: bold;
-                color: ;
+                color:white;
                 text-align: center;
                 margin-top:300px;
             }
+            table, td, th {
+                border: solid white 1px;
+            }
+            td {
+                text-align: right;
+            }
         </style>
     </head>
-    <body>
+    <body onload="buildTimesTable();">
         <ul>
-            <li><a class="active"  href="https://perryma.tk/VanceT/index.html">Home</a></li>
+            <li><a class="active">Home</a></li>
             <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
             <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
-            <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">Fun Ball</a></li>
+            <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">Fun Thing</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Other Links</a>
                 <div class="dropdown-content">
                     <a class="active" href="https://perryma.tk/VanceT/other.html">Other</a>
                     <a class="active" href="https://perryma.tk/VanceT/popup.html">Pop up</a>
-                    <a class="active">To Do List</a>
+                    <a class="active" href="https://perryma.tk/VanceT/todolist.html">To Do List</a>
                     <a class="active" href="https://perryma.tk/VanceT/chalkboard.html">Chalk Board</a>
                     <a class="active" href="https://perryma.tk/VanceT/tictactoe.html">Tic Tac Toe</a>
-                    <a class="active" href="https://perryma.tk/VanceT/Multiplication.html">Times Table</a>
+                    <a class="active">Times Table</a>
+
                 </div>
             </li>
         </ul>
-        <br>
-        <br>	
-        <textarea  rows="10" cols="80" id="inputText">Write something!</textarea>
-        <button onclick="testHTML();">Test!</button>
-        <span id="s1" onclick="clicked();">Hello</span>
         <script>
-            function testHTML() {
-                var theSpan = document.getElementById("s1");
-                var userInput = document.getElementById("inputText");
-                theSpan.innerHTML = userInput.value;
-            }
+        function buildTimesTable() {
+            // Create a table for the multiplication table
+            var timesTable = document.createElement("table");
+            timesTable.id = "timesTable";
+
+            // Add the table to the document's body
+            var body = document.body;
+            body.appendChild(timesTable);
+
+            // Fill in the multiplication table
+        }
         </script>
-        <span id="spanModify">.</span>
     </body>
 </html>
-
