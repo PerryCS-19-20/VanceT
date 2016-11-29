@@ -56,34 +56,74 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-h1 {
+h1{
     font-size: 100px;
     font-weight: bold;
-    color:white;
+    color:white ;
     text-align: center;
     margin-top:300px;
 }
-td {
-    border: 1px solid white;
-    border-collapse: collapse;
-    font-size: 80px;
-    color:white;
+h1.tactwo {
+    font-size: 100px;
+    font-weight: bold;
+    color:white ;
     text-align: center;
-    width:300px;
-    height:300px ;
+    margin-top:200px;
 }
-
-
+td{
+            width:100px;
+            height:100px;
+            border: 1px solid Black;
+            font-size:75px;
+            text-align:center;           
+        }    
 </style>
 <script>
-function play(id){
-var tic = document.getElementById(id);
-if(tic.textContent == "X" || tic.textContent == "O"){
-    tac.textContent="Nope";
-}else{
-    
-}
-}
+    var player = 1;
+    var winners = 0;
+    function play(id){       
+        if(winners ==0){
+        var tic = document.getElementById(id);       
+          if(tic.textContent == "X" || tic.textContent == "O"){
+         tac.textContent = "Try Again";   
+        } else {
+        if(player == 1 && tic.textContent != "O"){
+        tic.textContent = "X";  
+          player=2;
+          tac.textContent = " ";
+        } else { if (tic.textContent != "X" ){
+        tic.textContent = "O";  
+          player=1;
+        }     
+        }
+        }
+        checkwin();
+        }
+    }
+        function checkwin(){
+          checkrows(a1,a2,a3); 
+          checkrows(b1,b2,b3); 
+          checkrows(c1,c2,c3); 
+          checkrows(a1,b1,c1); 
+          checkrows(a2,b2,c2); 
+          checkrows(a3,b3,c3); 
+          checkrows(a1,b2,c3); 
+          checkrows(a3,b2,c1);    
+    }
+        function checkrows(first,second,third){
+           var one = document.getElementById(first); 
+           var two = document.getElementById(second); 
+           var three = document.getElementById(third); 
+          if(first.textContent == second.textContent && second.textContent == third.textContent && first.textContent == third.textContent && first.textContent !=""){                               
+            if(first.textContent == "O"){
+                tac.textContent = " O Wins"
+          }
+          if(first.textContent == "X"){
+           tac.textContent = " X Wins"
+          }
+          winners++;
+        }            
+        }      
 </script>
 </head>
 <body>
@@ -103,23 +143,26 @@ if(tic.textContent == "X" || tic.textContent == "O"){
     </div>
   </li>
 </ul>
-    <table style="width:50%">
-  <tr>
-    <td id="a1" onclick="play('a1');"></td>
-    <td id="a2" onclick="play('a2');"></td>
-    <td id="a3" onclick="play('a3');"></td>
-  </tr>
-  <tr>
-    <td id="b1" onclick="play('b1');"></td>
-    <td id="b2" onclick="play('b2');"></td>
-    <td id="b3" onclick="play('b3');"></td>
-  </tr>
-  <tr>
-    <td id="c1" onclick="play('c1');"></td>
-    <td id="c2" onclick="play('c2');"></td>
-    <td id="c3" onclick="play('c3');"></td>
-  </tr>
-
+	
+	<center>
+<table>
+    <tr>
+        <td id ="a1" onclick="play('a1');"></td>
+        <td id ="a2" onclick="play('a2');"></td>
+        <td id ="a3" onclick="play('a3');"></td>
+    </tr>
+    <tr>
+        <td id ="b1" onclick="play('b1');"></td>
+        <td id ="b2" onclick="play('b2');"></td>
+        <td id ="b3" onclick="play('b3');"></td>
+    </tr>
+    <tr>
+        <td id ="c1" onclick="play('c1');"></td>
+        <td id ="c2" onclick="play('c2');"></td>
+        <td id ="c3" onclick="play('c3');"></td>
+    </tr>    
 </table>
+   <h1 id ="tac" class="tac"></h1>
+</center>
 </body>
 </html>
