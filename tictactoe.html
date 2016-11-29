@@ -85,7 +85,7 @@ td{
         if(winners ==0){
         var tic = document.getElementById(id);       
           if(tic.textContent == "X" || tic.textContent == "O"){
-         tac.textContent = "WRONG!";   
+         tac.textContent = "Try Again";   
         } else {
         if(player == 1 && tic.textContent != "O"){
         tic.textContent = "X";  
@@ -94,7 +94,6 @@ td{
         } else { if (tic.textContent != "X" ){
         tic.textContent = "O";  
           player=1;
-          tac.textContent = " ";
         }     
         }
         }
