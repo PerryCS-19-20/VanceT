@@ -39,7 +39,7 @@
             }
 
             li.dropdown {
-                display: inline-block;
+                display: compact;
                 background-color: #4CAF50;
             }
             .dropdown-content {
@@ -101,7 +101,16 @@
             timesTable.id = "timesTable";
             var body = document.body;
             body.appendChild(timesTable);
-        }
+       
+            for(var i=0; i<11; i++){
+                var row= document.createElement("table");
+                timesTable.appendChild(row);
+                
+                row.textContent= i;
+               
+            }
+    
+    }
         </script>
     </body>
 </html>
