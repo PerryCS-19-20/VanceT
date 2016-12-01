@@ -103,10 +103,13 @@
             body.appendChild(timesTable);
        
             for(var i=0; i<11; i++){
-                var row= document.createElement("table");
+                var row= document.createElement("tr");
                 timesTable.appendChild(row);
                 
-                row.textContent= i;
+                for(var tr=0; tr<11; tr++){
+                var td= document.createElement("td");
+                row.appendChild(td);    
+                }
                
             }
     
