@@ -52,6 +52,49 @@
                 display: block;
             }
         </style>
+        <script>
+            window.onload = function() {
+            var hline =new Line(0,0,0,0);
+var vline =new Line(0,0,0,0);
+function start(){
+    add(hline);
+    add(vline);
+	mouseMoveMethod(onMouseMove);
+	mouseClickMethod(drawCircle);
+	
+}
+
+function onMouseMove(e){
+    hline.setPosition(0, e.getY());
+    hline.setEndpoint(getWidth(), e.getY());
+    vline.setPosition(e.getX(), 0);
+    vline.setEndpoint(e.getX(), getWidth()*2);
+
+}
+
+
+function hline(e) {
+    var hline =new Line(0,0,0,0);
+    hline.setPosition(e.getX(), 0);
+	hline.setEndpoint(getWidth()/2, getHeight()/2);
+
+}
+
+
+function drawCircle(e){
+    var circle = new Circle(10);
+    circle.setPosition(e.getX(), e.getY());
+    circle.setColor(Color.RED);
+    add(circle);
+    
+}
+
+function vline(e){
+    vline.setPosition(e.getX(), 0);
+    vline.setEndpoint(e.getX(), getWidth());
+}
+            }
+        </script>
     </head>
     <body>
         <ul>
