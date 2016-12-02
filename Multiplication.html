@@ -5,9 +5,6 @@
         <meta name="viewport" content="width=device-width">
         <title>Times Table</title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="popup.html" type="image/x-icon">
         <link rel="stylesheet" href="style.css" type="text/css"/>
 
         <style>
@@ -19,7 +16,7 @@
                 margin: 10px;
                 padding: 3px;
                 overflow: hidden;
-                background-color: #333;
+                background-color: #111;
             }
             li {
                 float: left;
@@ -50,7 +47,7 @@
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             }
             .dropdown-content a {
-                color: black;
+                color: #111;
                 padding: 12px 16px;
                 text-decoration: none;
                 display: block;
@@ -67,8 +64,12 @@
                 text-align: center;
                 margin-top:300px;
             }
-            table, td, th {
+            table, td {
                 border: solid white 1px;
+                text-align:center;
+                font-size:25px;
+                border-collapse:inherit;
+                color:white;
             }
             td {
                 text-align: right;
@@ -77,7 +78,7 @@
     </head>
     <body onload="buildTimesTable();">
         <ul>
-            <li><a class="active">Home</a></li>
+            <li><a class="active" href="https://perryma.tk/VanceT/index.html">Home</a></li>
             <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
             <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
             <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">Fun Thing</a></li>
@@ -89,7 +90,7 @@
                     <a class="active" href="https://perryma.tk/VanceT/todolist.html">To Do List</a>
                     <a class="active" href="https://perryma.tk/VanceT/chalkboard.html">Chalk Board</a>
                     <a class="active" href="https://perryma.tk/VanceT/tictactoe.html">Tic Tac Toe</a>
-                    <a class="active">Times Table</a>
+                    <a class="active" href="https://perryma.tk/VanceT/Multiplication.html">Times Table</a>
 
                 </div>
             </li>
@@ -101,19 +102,27 @@
             timesTable.id = "timesTable";
             var body = document.body;
             body.appendChild(timesTable);
-       
-            for(var i=0; i<11; i++){
-                var row= document.createElement("tr");
+
+            for (var i = 0; i < 11; i++) {
+                var row = document.createElement("tr");
                 timesTable.appendChild(row);
+                row.textContent = i;
                 
-                for(var tr=0; tr<11; tr++){
-                var td= document.createElement("td");
-                row.appendChild(td);    
+                for (var tr = 1; tr < 11; tr++) {
+                    if(i!= 0){
+                var td = document.createElement("td");
+                    row.appendChild(td);
+                    td.textContent = tr*i;
+                    } else {
+                        var th = document.createElement("th");
+                    row.appendChild(th);
+                    th.textContent = tr;
+                    }
                 }
-               
+
             }
-    
-    }
+
+        }
         </script>
     </body>
 </html>

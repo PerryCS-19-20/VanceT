@@ -4,6 +4,8 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
 
         <title>Fun Ball</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
         <style>
             body{
                 background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg"); 
@@ -54,6 +56,63 @@
                 display: block;
             }
         </style>
+        <script>
+            window.onload = function() {
+                var ball;
+                var dx = 10;
+                var dy = 10;
+
+
+                /* This program has a ball bounce around the screen. */
+                function start() {
+                    ball = new Circle(25);
+                    ball.setPosition(200, 30);
+                    add(ball);
+                    setTimer(drawCircle, 20);
+                    mouseClickMethod(teleport);
+
+
+                }
+
+                function drawCircle(e) {
+                    checkWalls();
+                    ball.move(dx, dy);
+                }
+
+                function checkWalls() {
+                    // Bounce off right wall
+                    if (ball.getX() + ball.getRadius() > getWidth()) {
+                        dx = -dx;
+                    }
+
+                    // Bounce off left wall
+                    if (ball.getX() - ball.getRadius() < 0) {
+                        dx = -dx;
+                    }
+
+                    // Bounce off bottom wall
+                    if (ball.getY() + ball.getRadius() > getHeight()) {
+                        dy = -dy;
+                    }
+
+                    // Bounce off top wall
+                    if (ball.getY() - ball.getRadius() < 0) {
+                        dy = -dy;
+                    }
+                }
+                function teleport(e) {
+                    ball.setPosition(e.getX(), e.getY());
+                    ball.setColor(Randomizer.nextColor());
+            }
+            }
+        </script>
+
+        <style>
+            canvas {
+                border: 5px solid white;
+            }
+        </style>
+    </head>
     <body>
         <ul>
             <li><a class="active"  href="https://perryma.tk/VanceT/index.html">Home</a></li>
@@ -73,67 +132,11 @@
             </li>
         </ul>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
-    <script>
-        window.onload = function() {
-var ball;
-var dx = 10;
-var dy = 10;
 
+    <body>
 
-/* This program has a ball bounce around the screen. */
-function start(){
-	ball = new Circle(25);
-	ball.setPosition(200, 30);
-	add(ball);
-	setTimer(drawCircle,20);
-	mouseClickMethod(teleport);
-
-	
-}
-
-function drawCircle(e){
-	checkWalls();
-	ball.move(dx, dy);
-}
-
-function checkWalls(){
-	// Bounce off right wall
-	if(ball.getX() + ball.getRadius() > getWidth()){
-		dx = -dx;
-	}
-	
-	// Bounce off left wall
-	if(ball.getX() - ball.getRadius() < 0){
-		dx = -dx;
-	}
-	
-	// Bounce off bottom wall
-	if(ball.getY() + ball.getRadius() > getHeight()){
-		dy = -dy;
-	}
-	
-	// Bounce off top wall
-	if(ball.getY() - ball.getRadius() < 0){
-		dy = -dy;
-	}
-}
-function teleport(e){
-    ball.setPosition(e.getX(),e.getY());
-    ball.setColor(Randomizer.nextColor());
-}
-
-    </script>
-    <style>
-        canvas {
-            border: 5px solid white;
-        }
-    </style>
-</head>
-<body>
-    <div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
-        <canvas width="500" height="600" class="codehs-editor-canvas"></canvas>
-    </div>
-</body>
+        <div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
+            <canvas width="500" height="600" class="codehs-editor-canvas"></canvas>
+        </div>
+    </body>
 </html>

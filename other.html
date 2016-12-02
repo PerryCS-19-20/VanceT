@@ -3,10 +3,10 @@
     <head>
         <link rel="stylesheet" href="style.css" type="text/css"/>
 
-        <title>Breakout</title>
+        <title>Other</title>
         <style>
             body{
-                background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg"); 
+                background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
             }
             ul {
                 list-style-type: none;
@@ -31,8 +31,9 @@
             .active {
                 background-color: #4CAF50;
             }
+
             li.dropdown {
-                display: inline-block;
+                display: compact;
                 background-color: #4CAF50;
             }
             .dropdown-content {
@@ -43,7 +44,7 @@
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             }
             .dropdown-content a {
-                color: black;
+                color: #111;
                 padding: 12px 16px;
                 text-decoration: none;
                 display: block;
@@ -53,13 +54,20 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
+            h1 {
+                font-size: 100px;
+                font-weight: bold;
+                color:white;
+                text-align: center;
+                margin-top:300px;
+            }
         </style>
     <body>
         <ul>
             <li><a class="active"  href="https://perryma.tk/VanceT/index.html">Home</a></li>
             <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
             <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
-            <li><a class="active"> href="https://perryma.tk/VanceT/codehs.html"</a>Fun Ball</li>
+            <li><a class="active" href="https://perryma.tk/VanceT/codehs.html"</a>Fun Ball</li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Other Links</a>
                 <div class="dropdown-content">
@@ -77,45 +85,46 @@
     <script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
     <script>
         window.onload = function() {
-var hline =new Line(0,0,0,0);
-var vline =new Line(0,0,0,0);
-function start(){
-    add(hline);
-    add(vline);
-	mouseMoveMethod(onMouseMove);
-	mouseClickMethod(drawCircle);
-	
-}
+            var hline = new Line(0, 0, 0, 0);
+            var vline = new Line(0, 0, 0, 0);
+            function start() {
+                add(hline);
+                add(vline);
+                mouseMoveMethod(onMouseMove);
+                mouseClickMethod(drawCircle);
 
-function onMouseMove(e){
-    hline.setPosition(0, e.getY());
-    hline.setEndpoint(getWidth(), e.getY());
-    vline.setPosition(e.getX(), 0);
-    vline.setEndpoint(e.getX(), getWidth()*2);
+            }
 
-}
+            function onMouseMove(e) {
+                hline.setPosition(0, e.getY());
+                hline.setEndpoint(getWidth(), e.getY());
+                vline.setPosition(e.getX(), 0);
+                vline.setEndpoint(e.getX(), getWidth() * 2);
 
-
-function hline(e) {
-    var hline =new Line(0,0,0,0);
-    hline.setPosition(e.getX(), 0);
-	hline.setEndpoint(getWidth()/2, getHeight()/2);
-
-}
+            }
 
 
-function drawCircle(e){
-    var circle = new Circle(10);
-    circle.setPosition(e.getX(), e.getY());
-    circle.setColor(Color.RED);
-    add(circle);
-    
-}
+            function hline(e) {
+                var hline = new Line(0, 0, 0, 0);
+                hline.setPosition(e.getX(), 0);
+                hline.setEndpoint(getWidth() / 2, getHeight() / 2);
 
-function vline(e){
-    vline.setPosition(e.getX(), 0);
-    vline.setEndpoint(e.getX(), getWidth());
-}
+            }
+
+
+            function drawCircle(e) {
+                var circle = new Circle(10);
+                circle.setPosition(e.getX(), e.getY());
+                circle.setColor(Color.RED);
+                add(circle);
+
+            }
+
+            function vline(e) {
+                vline.setPosition(e.getX(), 0);
+                vline.setEndpoint(e.getX(), getWidth());
+            }
+        }
     </script>
     <style>
         canvas {
