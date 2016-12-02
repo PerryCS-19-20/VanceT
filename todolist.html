@@ -3,8 +3,6 @@
     <head>
         <title> Vance's Website </title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="popup.html" type="image/x-icon">
         <style> 
             body{
@@ -63,6 +61,16 @@
                 margin-top:300px;
             }
         </style>
+        <script>
+                                function todo() {
+                                var userInput = document.getElementById("inputText");
+                                var theSpan = document.getElementById("spanModifyChalkboard");
+                                
+                                 var newItem = document.createElement("li");  
+                                 newItem.textContent = "I will not" + " " + userInput.value;
+                                 theSpan.appendChild(newItem);
+                        }
+        </script>
     </head>
     <body>
         <ul>
@@ -85,7 +93,7 @@
         <br>
         <br>	
         <textarea  rows="10" cols="80" id="inputText">Write something!</textarea>
-        <button onclick="testHTML();">Test!</button>
+        <button onclick="testHTML();">Click!</button>
         <span id="s1" onclick="clicked();">Hello</span>
         <script>
             function testHTML() {
