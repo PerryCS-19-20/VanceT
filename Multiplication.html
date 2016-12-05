@@ -60,19 +60,19 @@
             h1 {
                 font-size: 100px;
                 font-weight: bold;
-                color:white;
+                color:#f1f1f1;
                 text-align: center;
                 margin-top:300px;
             }
             table, td {
-                border: solid white 1px;
+                border: solid black 2px;
                 text-align:center;
-                font-size:25px;
-                border-collapse:inherit;
-                color:white;
+                font-size:20px;
+                border-collapse:separate;
+                color:whitesmoke;
             }
             td {
-                text-align: right;
+                text-align: center;
             }
         </style>
     </head>
@@ -113,16 +113,25 @@
                 var td = document.createElement("td");
                     row.appendChild(td);
                     td.textContent = tr*i;
+                    if(tr == 1 || tr == 4 || tr == 7 || tr == 10){
+                    td.style.color="black";
+                }else{
+                    td.style.color="lime";
+                }
                     } else {
                         var th = document.createElement("th");
                     row.appendChild(th);
                     th.textContent = tr;
+                  
                     }
+
                 }
+
 
             }
 
         }
+        
         </script>
     </body>
 </html>
