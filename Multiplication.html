@@ -107,22 +107,22 @@
                 var row = document.createElement("tr");
                 timesTable.appendChild(row);
                 row.textContent = i;
-                
+
                 for (var tr = 1; tr < 11; tr++) {
-                    if(i!= 0){
-                var td = document.createElement("td");
-                    row.appendChild(td);
-                    td.textContent = tr*i;
-                    if(tr == 1 || tr == 4 || tr == 7 || tr == 10){
-                    td.style.color="black";
-                }else{
-                    td.style.color="lime";
-                }
+                    if (i != 0) {
+                        var td = document.createElement("td");
+                        row.appendChild(td);
+                        td.textContent = tr * i;
+                        if (tr == 1 || tr == 4 || tr == 7 || tr == 10) {
+                            td.style.color = "black";
+                        } else {
+                            td.style.color = "lime";
+                        }
                     } else {
                         var th = document.createElement("th");
-                    row.appendChild(th);
-                    th.textContent = tr;
-                  
+                        row.appendChild(th);
+                        th.textContent = tr;
+
                     }
 
                 }
@@ -131,7 +131,7 @@
             }
 
         }
-        
+
         </script>
     </body>
 </html>
