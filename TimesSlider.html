@@ -97,7 +97,7 @@
         </ul>
         <h1>Multiplication Table</h1>
         Table Width:<input type="range" id="tableWidth" min="11" max="101" value="101" onchange ="buildTimesTable();"><br>
-        Table Heigh:<input type="range" id="tableHeight" min="11" max="101" value="101" onchange ="buildTimesTable();"><br>
+        Table Height:<input type="range" id="tableHeight" min="11" max="101" value="101" onchange ="buildTimesTable();"><br>
         <script>
         function buildTimesTable() {
             var timesTable = document.getElementById("timesTable");
@@ -113,23 +113,31 @@
             for (var i = 0; i < height; i++) {
                 var tableRow = document.createElement("tr");
                 timesTable.appendChild(tableRow);
-                for (var a = 0; a < width; a++) {
-                    var cell;
-                    if (i === 0) {
-                        cell = document.createElement("th");
-                        if (a > 0) {
-                            cell.textContent = a;
-                        }
-                    } else {
-                        if (a === 0) {
-                            cell = document.createElement("th");
-                            cell.textContent = i;
+                for (var i = 0; i < 11; i++) {
+                    var row = document.createElement("tr");
+                    timesTable.appendChild(row);
+                    row.textContent = i;
+
+                    for (var tr = 1; tr < 11; tr++) {
+                        if (i != 0) {
+                            var td = document.createElement("td");
+                            row.appendChild(td);
+                            td.textContent = tr * i;
+                            if (tr == 1 || tr == 4 || tr == 7 || tr == 10) {
+                                td.style.color = "black";
+                            } else {
+                                td.style.color = "lime";
+                            }
                         } else {
-                            cell = document.createElement("td");
-                            cell.textContent = a * i;
+                            var th = document.createElement("th");
+                            row.appendChild(th);
+                            th.textContent = tr;
+
                         }
+
                     }
-                    timesTable.appendChild(cell);
+
+
                 }
             }
         }
