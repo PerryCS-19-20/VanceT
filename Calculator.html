@@ -6,9 +6,8 @@
         <title>Calculator</title>
         <script>
             function calc() {
-                var h = parseFloat(document.getElementById("height").value);
-                var r = parseFloat(document.getElementById("rad").value);
-                var vol = document.getElementById("vol");
+                var s = parseFloat(document.getElementById("side").value);
+                //var vol = document.getElementById("vol");
 
 
                 var area = Math.PI * r * r;
@@ -23,12 +22,12 @@
         </style>
     </head>
     <body>
-        <h1>Volume of a Cube:</h1>
+        <h1>Surface Area of a Cube:</h1>
         <img src="" style="float: left; height: 150px; margin-right: 5px;">
-        <h2>v = h &pi; r <sup>2</sup></h2>
+        <h2>SA = 6s<sup>2</sup></h2>
 
-        h: <input type="number" id="height" placeholder="height"><br>
-        r: <input type="number" id="rad" placeholder="radius">
+        s: <input type="number" id="side" placeholder="side"><br>
+        
         <button onclick="calc();">Calculate</button>
         <hr>
         v: <input type="output" id="vol" placeholder="volume" readonly>
