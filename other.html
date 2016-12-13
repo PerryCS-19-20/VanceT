@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Breakout</title>
+        <title>Other</title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="https://codehs.com/editor/189/274690/3/1"></script>
         <style> 
-            body{
+body{
                 background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
             }
             ul {
@@ -17,7 +17,7 @@
                 margin: 10px;
                 padding: 3px;
                 overflow: hidden;
-                background-color: #333;
+                background-color: #111;
             }
             li {
                 float: left;
@@ -30,7 +30,7 @@
                 text-decoration: none;
             }
             li a:hover {
-                background-color: #111;
+                background-color: seagreen;
             }
             .active {
                 background-color: #4CAF50;
@@ -44,8 +44,8 @@
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: white;
-                min-width: 150px;
+                background-color: seagreen;
+                min-width: 225px;
                 box-shadow: 10px 8px 16px 10px rgba(5,5,0,10.2);
             }
             .dropdown-content a {
@@ -60,11 +60,12 @@
                 display: block;
             }
             h1 {
+
                 font-size: 100px;
-                font-weight: bold;
-                color:black;
-                text-align: left;
-                margin-top:250px;
+                font-weight: bolder;
+                color:honeydew;
+                text-align: start;
+                margin-top:200px;
             }
         </style>
     <body>
@@ -72,7 +73,7 @@
             <li><a class="active"  href="https://perryma.tk/VanceT/index.html">Home</a></li>
             <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
             <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
-            <li><a class="active" href="https://perryma.tk/VanceT/codehs.html"</a>Fun Ball</li>
+            <li><a class="active" href="https://perryma.tk/VanceT/codehs.html">Fun Ball</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Other Links</a>
                 <div class="dropdown-content">
@@ -88,60 +89,5 @@
             </li>
         </ul>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
-    <script>
-         window.onload = function() {
-var hline =new Line(0,0,0,0);
-var vline =new Line(0,0,0,0);
-function start(){
-    add(hline);
-    add(vline);
-	mouseMoveMethod(onMouseMove);
-	mouseClickMethod(drawCircle);
-	
-}
-
-function onMouseMove(e){
-    hline.setPosition(0, e.getY());
-    hline.setEndpoint(getWidth(), e.getY());
-    vline.setPosition(e.getX(), 0);
-    vline.setEndpoint(e.getX(), getWidth()*2);
-
-}
-
-
-function hline(e) {
-    var hline =new Line(0,0,0,0);
-    hline.setPosition(e.getX(), 0);
-	hline.setEndpoint(getWidth()/2, getHeight()/2);
-
-}
-
-
-function drawCircle(e){
-    var circle = new Circle(10);
-    circle.setPosition(e.getX(), e.getY());
-    circle.setColor(Color.RED);
-    add(circle);
-    
-}
-
-function vline(e){
-    vline.setPosition(e.getX(), 0);
-    vline.setEndpoint(e.getX(), getWidth());
-}
-         };
-        </script>
-    <style>
-        canvas {
-            border: 5px solid white;
-        }
-    </style>
 </head>
-<body>
-    <div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
-        <canvas width="500" height="600" class="codehs-editor-canvas"></canvas>
-    </div>
-</body>
 </html>
