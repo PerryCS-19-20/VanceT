@@ -2,82 +2,8 @@
 <html>
     <head>
         <title> Chalk Board </title>
-        <link rel="stylesheet" type="text/css" href="style2.css"> 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="popup.html" type="image/x-icon">
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        <style> 
-           body{
-                background-image:url("https://raw.githubusercontent.com/PerryHighCS/VanceT/master/skyrim.jpeg");
-            }
-            ul.navbar {
-                list-style-type: none;
-                margin: 10px;
-                padding: 3px;
-                overflow: hidden;
-                background-color: #111;
-            }
-            li.navbar {
-                float: left;
-            }
-            li a.navbar {
-                display: block;
-                color: #f1f1f1;
-                text-align: center;
-                padding:27px 158.2px;
-            }
-            li a:hover.navbar {
-                background-color: seagreen;
-            }
-            .active {
-                background-color: #4CAF50;
-            }
+        <link rel="stylesheet" type="text/css" href="style.css"> 
 
-
-            li.dropdown.navbar {
-                display: inline-block;
-                background-color: #4CAF50;
-            }
-            .dropdown-content.navbar {
-                display: none;
-                position: absolute;
-                background-color: seagreen;
-                min-width: 225px;
-                box-shadow: 10px 8px 16px 10px rgba(5,5,0,10.2);
-            }
-            .dropdown-content a.navbar {
-                color: #111;
-                padding: 15px 20px;
-                text-decoration: bold;
-                display: block;
-                text-align: left;
-            }
-            .dropdown-content a:hover.navbar {
-                background-color: #f1f1f1}
-            .dropdown:hover .dropdown-content.navbar {
-                display: block;
-            }
-            h1.navbar {
-                font-family:sans-serif;
-                font-size: 100px;
-                font-weight: normal;
-                color:#333;
-                text-align: left;
-                margin-top:300px;
-            }
-        </style>
-        <script class="testhtml">
-            function addlist() {
-                var theSpan = document.getElementById("spanModifyChalkboard");
-                var userInput = document.getElementById("iText");
-                for (var i = 0; i < 100; i++) {
-                    var words = document.createElement("li");
-                    words.textContent = "I Will Not " + userInput.value;
-                    theSpan.appendChild(words);
-                }
-            }
-        </script>
     </head>
     <body class="navbar">
         <ul class="navbar">
