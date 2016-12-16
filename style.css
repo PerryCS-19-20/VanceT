@@ -5,17 +5,17 @@ ul {
     list-style-type: none;
     margin: 10px;
     padding: 3px;
-    overflow: hidden;
+    overflow: auto;
     background-color: #111;
 }
 li {
     float: left;
 }
 li a {
-    display: block;
-    color: #f1f1f1;
-    text-align: center;
-    padding:27px 158.8px;
+    display: none;
+    color: #ffffff;
+    text-align: left;
+    padding:35px 40px;
 }
 li a:hover {
     background-color: #111;
@@ -25,50 +25,50 @@ li a:hover {
 }
 
 li.dropdown {
-    display: inline-block;
+    display: inline-table;
     background-color: #4CAF50;
 }
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: seagreen;
-    min-width: 225px;
-    box-shadow: 10px 8px 16px 10px rgba(5,5,0,10.2);
+    background-color: black;
+    min-width: min-content;
+    box-shadow: #4CAF50;
 }
 .dropdown-content a {
     color: #111;
-    padding: 15px 20px;
-    text-decoration: bold;
-    display: block;
+    padding: auto;
+    display: none;
     text-align: left;
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: inline-table;
 }
 h1 {
     font-family:sans-serif;
     font-size: 100px;
     font-weight: normal;
     color:#333;
-    text-align: left;
-    margin-top:300px;
+    text-align: center;
+    margin-top:200px;
 }
 
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    color: black;
+    color: white;
     text-align: center;
 }
 p {
-    font-size: 40px; 
+    font-size: 30px; 
     font-weight: bold;
     color:white;
 }
 h3 {
-    font-size:25px;
+    font-size:40px;
+    color:white;
 }
 h4 {
     text-align: center;
@@ -100,7 +100,8 @@ span{
 }
 
 .dropbtn {
-
+display: none;
+    position: absolute;
 }
 textarea{
     color:black;
@@ -132,9 +133,9 @@ h1.tactwo {
 }
 td{
     color: #111;
-    width:150px;
-    height:150px;
-    border:5px solid #4CAF50;
-    font-size:120px;
+    width:75px;
+    height:75px;
+    border:3px solid #4CAF50;
+    font-size:50px;
     text-align:center;           
 }  

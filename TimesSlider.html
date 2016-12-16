@@ -28,8 +28,8 @@
             </li>
         </ul>
         <h1>Multiplication Table</h1>
-        Table Width:<input type="range" id="tableWidth" min="11" max="101" value="101" onchange ="buildTimesTable();"><br>
-        Table Height:<input type="range" id="tableHeight" min="11" max="101" value="101" onchange ="buildTimesTable();"><br>
+        Table Width:<input type="range" id="tableWidth" min="11" max="101" value="11" onchange ="buildTimesTable();"><br>
+        Table Height:<input type="range" id="tableHeight" min="11" max="101" value="11" onchange ="buildTimesTable();"><br>
         <script>
         function buildTimesTable() {
             var timesTable = document.getElementById("timesTable");
@@ -42,35 +42,31 @@
             body.appendChild(timesTable);
             var width = document.getElementById("tableWidth").value;
             var height = document.getElementById("tableHeight").value;
-            for (var i = 0; i < height; i++) {
-                var tableRow = document.createElement("tr");
-                timesTable.appendChild(tableRow);
-                for (var i = 0; i < 11; i++) {
-                    var row = document.createElement("tr");
-                    timesTable.appendChild(row);
-                    row.textContent = i;
+             for (var i = 0; i < height; i++) {
+                var row = document.createElement("tr");
+                timesTable.appendChild(row);
+                row.textContent = i;
 
-                    for (var tr = 1; tr < 11; tr++) {
-                        if (i != 0) {
-                            var td = document.createElement("td");
-                            row.appendChild(td);
-                            td.textContent = tr * i;
-                            if (tr == 1 || tr == 4 || tr == 7 || tr == 10) {
-                           
-                            } else {
-                                
-                            }
+                for (var tr = 1; tr < width; tr++) {
+                    if (i != 0) {
+                        var td = document.createElement("td");
+                        row.appendChild(td);
+                        td.textContent = tr * i;
+                        if (tr == 1 || tr == 4 || tr == 7 || tr == 10) {
+                            td.style.color = "black";
                         } else {
-                            var th = document.createElement("th");
-                            row.appendChild(th);
-                            th.textContent = tr;
-
+                            td.style.color = "lime";
                         }
+                    } else {
+                        var th = document.createElement("th");
+                        row.appendChild(th);
+                        th.textContent = tr;
 
                     }
 
-
                 }
+
+
             }
         }
 
