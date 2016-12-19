@@ -7,7 +7,7 @@ ul {
     margin: 10px;
     padding: 3px;
     overflow: auto;
-    background-color: aquamarine;
+    background-color: #111;
 }
 li {
     font-family: sans-serif;
@@ -26,13 +26,13 @@ li a:hover {
 }
 .active {
     font-family: sans-serif;
-    background-color: #111;
+    background-color: aquamarine;
 }
 
 li.dropdown {
     font-family: sans-serif;
     display: inline-table;
-    background-color: #111; 
+    background-color: aquamarine;
 }
 .dropdown-content {
     font-family: sans-serif;
@@ -66,7 +66,7 @@ h2 {
     font-family: sans-serif;
     font-size: 40px;
     font-weight: bolder;
-    color: #111;
+    color: white;
     text-align: center;
 }
 p {
@@ -74,8 +74,6 @@ p {
     font-weight: bolder;
     color:aquamarine;
     font-family: sans-serif;
-    text-decoration-line: cancel-underline;
-    text-decoration-color: #FF6347;
 }
 h3 {
     font-size:40px;
@@ -156,9 +154,12 @@ h1.tactwo {
 td{
     font-family: sans-serif;
     color: #111;
-    width:75px;
-    height:75px;
-    border:3px solid #4CAF50;
-    font-size:50px;
+    width:200px;
+    height:200px;
+    border:5px solid aquamarine;
+    font-size:100px;
     text-align:center;           
 }  
+h1.tac{
+    color:white;
+}
