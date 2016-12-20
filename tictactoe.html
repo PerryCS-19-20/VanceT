@@ -3,6 +3,27 @@
     <head>
         <title> Vance's Website </title>
         <link rel="stylesheet" type="text/css" href="style.css">        
+    </head>
+    <body>
+        <ul>
+            <li><a class="active" href="https://perryma.tk/VanceT/index.html">Home</a></li>
+            <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
+            <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
+            <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">fun Ball</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Other Links</a>
+                <div class="dropdown-content">
+                    <a class="active" href="https://perryma.tk/VanceT/other.html">Other</a>
+                    <a class="active" href="https://perryma.tk/VanceT/popup.html">Pop up</a>
+                    <a class="active" href="https://perryma.tk/VanceT/todolist.html">To Do List</a>
+                    <a class="active" href="https://perryma.tk/VanceT/chalkboard.html">Chalk Board</a>
+                    <a class="active">Tic Tac Toe</a>
+                    <a class="active" href="https://perryma.tk/VanceT/Multiplication.html">Times Table</a>
+                    <a class="active" href="https://perryma.tk/VanceT/TimesSlider.html">Times Slider</a>
+                    <a class="active" href="https://perryma.tk/VanceT/sitemap.html">Site Map</a>
+                </div>
+            </li>
+        </ul>
         <script>
             var player = 1;
             var winners = 0;
@@ -51,44 +72,22 @@
                 }
             }
         </script>
-    </head>
-    <body>
-        <ul>
-            <li><a class="active" href="https://perryma.tk/VanceT/index.html">Home</a></li>
-            <li><a class="active" href="https://perryma.tk/VanceT/aboutme.html">About Me</a></li>
-            <li><a class="active"  href="https://perryma.tk/VanceT/breakout.html">Breakout</a></li>
-            <li><a class="active"  href="https://perryma.tk/VanceT/codehs.html">fun Ball</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Other Links</a>
-                <div class="dropdown-content">
-                    <a class="active" href="https://perryma.tk/VanceT/other.html">Other</a>
-                    <a class="active" href="https://perryma.tk/VanceT/popup.html">Pop up</a>
-                    <a class="active" href="https://perryma.tk/VanceT/todolist.html">To Do List</a>
-                    <a class="active" href="https://perryma.tk/VanceT/chalkboard.html">Chalk Board</a>
-                    <a class="active">Tic Tac Toe</a>
-                    <a class="active" href="https://perryma.tk/VanceT/Multiplication.html">Times Table</a>
-                    <a class="active" href="https://perryma.tk/VanceT/TimesSlider.html">Times Slider</a>
-                    <a class="active" href="https://perryma.tk/VanceT/sitemap.html">Site Map</a>
-                </div>
-            </li>
-        </ul>
-
     <center>
-        <table>
-            <tr>
-                <td id ="a1" onclick="play('a1');"></td>
-                <td id ="a2" onclick="play('a2');"></td>
-                <td id ="a3" onclick="play('a3');"></td>
+        <table class="tac">
+            <tr class="tac">
+                <td class="tac"id ="a1" onclick="play('a1');"></td>
+                <td class="tac" id ="a2" onclick="play('a2');"></td>
+                <td class="tac" id ="a3" onclick="play('a3');"></td>
             </tr>
             <tr>
-                <td id ="b1" onclick="play('b1');"></td>
-                <td id ="b2" onclick="play('b2');"></td>
-                <td id ="b3" onclick="play('b3');"></td>
+                <td class="tac" id ="b1" onclick="play('b1');"></td>
+                <td class="tac" id ="b2" onclick="play('b2');"></td>
+                <td class="tac" id ="b3" onclick="play('b3');"></td>
             </tr>
             <tr>
-                <td id ="c1" onclick="play('c1');"></td>
-                <td id ="c2" onclick="play('c2');"></td>
-                <td id ="c3" onclick="play('c3');"></td>
+                <td class="tac" id ="c1" onclick="play('c1');"></td>
+                <td class="tac" id ="c2" onclick="play('c2');"></td>
+                <td class="tac" id ="c3" onclick="play('c3');"></td>
             </tr>    
         </table>
         <h1 id ="tac" class="tac"></h1>
