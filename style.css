@@ -60,7 +60,6 @@ h1 {
     text-align: center;
     margin-top:250px;
 }
-
 h2 {
     font-family: sans-serif;
     font-size: 40px;
@@ -96,7 +95,7 @@ ol {
 }
 
 canvas {
-    
+
     border: 1px solid black;
 }
 #spanModify{
@@ -114,7 +113,7 @@ span{
 
 .dropbtn {
     font-family: sans-serif;
-display: none;
+    display: none;
     position: absolute;
 }
 textarea{
@@ -160,14 +159,14 @@ td{
     text-align:center;           
 }  
 h1.tac{
-   font-family:sans-serif;
+    font-family:sans-serif;
     font-size: 100px;
     color:#FF6347;
     text-align: center;
     margin-top:0px;  
 }
 h1.table{
-   font-family:sans-serif;
+    font-family:sans-serif;
     font-size: 100px;
     font-weifont-familyght: normal;
     color:#333;
