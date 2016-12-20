@@ -93,9 +93,7 @@ ol {
     margin: 50px;
     font-family: sans-serif;
 }
-
 canvas {
-
     border: 1px solid black;
 }
 #spanModify{
@@ -110,7 +108,6 @@ span{
     font-size: 50px;
     text-align: center;
 }
-
 .dropbtn {
     font-family: sans-serif;
     display: none;
@@ -136,8 +133,6 @@ a:link, a:visited {
     text-decoration: none;
     display: inline-block;
 }
-
-
 a:hover, a:active {
     font-family: sans-serif;
     background-color: #333;
